@@ -1,14 +1,15 @@
-Package: hyggshi-test
-Version: 0.0.1
+Package: nexfetch
+Version: 1.0.0
 Architecture: amd64
 Maintainer: Hyggshi OS Foundation <tfhy5321@gmail.com>
 Priority: optional
 Section: utils
-Filename: pool/main/h/hyggshi-test/hyggshi-test_0.0.1_amd64.deb
-Size: 570
-SHA256: 75c89fb2243c497f204d13e20f1a9c1f67887050a7f026f7bbb7bb2005ca8371
-SHA1: 8e84ad996b1f0520b2e99e162e4b40ab133a7895
-MD5sum: 3b0f88cea24287798d874a7985f2867e
-Description: Test package for Hyggshi APT repository
- This is a placeholder package used to verify the apt-repo pipeline.
+Filename: pool/main/n/nexfetch/nexfetch_1.0.0_amd64.deb
+Size: 39502
+SHA256: 9a81e9edfb655a23e5d53403ae07a1576b4be57b72bf5bff695f81518904c04c
+SHA1: 933ef4de8ae7c38c5fe8324be20b8cc65f3127c1
+MD5sum: acbd6ab3b38780529425ccd024bd56ba
+Description: A fast neofetch-style system info tool
+ nexfetch is a lightweight, high-performance system information
+ fetcher written in C, roughly 3x faster than fastfetch.
 
