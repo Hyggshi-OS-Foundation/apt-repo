@@ -4,3 +4,4 @@ Codename: stable
 Architectures: amd64 arm64 source
 Components: main
 Description: Official APT repository for Hyggshi OS
+
