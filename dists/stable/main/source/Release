@@ -1,0 +1,5 @@
+Component: main
+Origin: Hyggshi OS
+Label: Hyggshi OS
+Architecture: source
+Description: Official APT repository for Hyggshi OS
