@@ -1,0 +1,4 @@
+db/
+*.deb
+private.asc
+*.tmp
