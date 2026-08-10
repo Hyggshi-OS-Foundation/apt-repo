@@ -1,7 +1,6 @@
 Origin: Hyggshi OS
 Label: Hyggshi OS
 Codename: stable
-Architectures: amd64 arm64 source
+Architectures: amd64 arm64 armhf source
 Components: main
 Description: Official APT repository for Hyggshi OS
-
