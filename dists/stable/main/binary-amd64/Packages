@@ -1,20 +1,19 @@
-Package: nexcode-ide
-Version: 3.5.7~Insider.8
-License: MIT
-Vendor: Hyggshi OS major project center <hyggshidev@gmail.com>
+Package: updatecenter
+Version: 1.0.6-1
 Architecture: amd64
-Maintainer: Hyggshi OS major project center <hyggshidev@gmail.com>
-Installed-Size: 335143
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, libasound2
-Recommends: libappindicator3-1
-Homepage: https://github.com/Hyggshi-OS-project-center/NexCode
+Maintainer: Hyggshi OS <hyggshidev@gmail.com>
+Installed-Size: 326
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.4.0), libqt6gui6t64 (>= 6.4.0), libqt6network6t64 (>= 6.1.2), libqt6widgets6t64 (>= 6.1.2), libstdc++6 (>= 5)
 Priority: optional
-Section: devel
-Filename: pool/main/n/nexcode-ide/nexcode-ide_3.5.7~Insider.8_amd64.deb
-Size: 100450698
-SHA256: 522233e4b3dd9aec2c85469885c7761d9a7139dede214156ad0fe6522ba4b1c0
-SHA1: 23469b4ca35213c7da1e2b853f2948a94958d333
-MD5sum: aac9fee1408bc71ba4dc3bfc66ad2dba
-Description: 
-  NexCode IDE — desktop code editor
+Section: utils
+Filename: pool/main/u/updatecenter/updatecenter_1.0.6-1_amd64.deb
+Size: 116534
+SHA256: 8d0f404d5493f598ebd8d499c5510d5fe68eebcdcf39f3b9198809ee8aa5918b
+SHA1: 0584363cb8d62ac4c631c2184909cb43c92d836a
+MD5sum: 081e483be8a866d120a037067898c92c
+Description: Graphical Linux system update manager
+ UpdateCenter is a graphical front-end for APT on Debian/Ubuntu-based
+ distributions. It provides a polished Qt 6 GUI for browsing and installing
+ system updates, viewing update history parsed from real APT/dpkg logs, and
+ managing third-party repositories with GPG key verification.
 
