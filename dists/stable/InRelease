@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Origin: Hyggshi OS
 Label: Hyggshi OS
 Codename: stable
@@ -44,3 +47,19 @@ SHA256:
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
  2a6a8c570e854e370a9fc7b69340e16e730addf2daab880cbd0d148850bbea84 126 main/source/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEM/Unw1A2tRD/0QoQeFF+UAAqwxQFAmp+g7sACgkQeFF+UAAq
+wxRB0hAArl0XZOqLHZxGSBtHgXdMo9+fuFHwPsHolqe4o3lii0ePWBYn/wbvNA4m
+XmfCvnk6Uck53u9sLEedfUClCzezW8BqBP5jGsUF5A/HPJUtq2nK0SWQ+noaQbuW
+2GvhIpPuigdXGBJgY1YEe7BPwB3ivCBXrtH1VsThQ2CwTNSXB8e1Z2vD6rJrzijg
+vT+SQjqebQG44C13Unn6g5HuRvwy+MTaibhgPALoZ9fs2cQofrPq288/yAbRMdrb
+C9xszbZk9uDK8RyUpqvxDmZg1h8XYYZGke0/zRi33HBF43Z0aZSi6yJoOHsElAJm
+3DBoIFPp5rqIpzK+PMqWmg4iEveEI8ivfRRK4Oq+gDyss3Muj28J2sixiOVx90iI
+LqJNirEAurDgbPhblth7tj4xN7jHTV69z+YwffYV/bztnYXgn2+cpNT6C07qWCNr
+qQgqwZjYJcm2UeomLpm7RNeSUtFh5IzzxXU0DeXG60bqNrovYBklr/gbBK/D0Ew4
+1Tg4P20e4B3osI3gAuCafjFa+V4QIPU+Q8LqGSJzK5jMlFF+WlwkyfH38mYBN9oA
+SsBtHQ4TvDGWfMOjTUOO4Nv5HahANoyTfHfkaThrKKF1tpjB2/4z1uRCU/pGqfSu
+coyxNPfeU3CX+ldm+p4xfBnMkmGjG0AzJAUlaOdRwL/nharS63Q=
+=3nXE
+-----END PGP SIGNATURE-----
