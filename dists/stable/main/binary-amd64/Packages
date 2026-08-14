@@ -7,10 +7,10 @@ Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.4.0), libqt
 Priority: optional
 Section: utils
 Filename: pool/main/u/updatecenter/updatecenter_1.0.0-1_amd64.deb
-Size: 117118
-SHA256: a1c58095f9a8aec46612fb24f12b7f2918f628fb513de97f781a55bb52215d5b
-SHA1: e105fcaf2cc050320a2cb0505ec1394ae63be141
-MD5sum: b766da2660e9bad332350d0099943e10
+Size: 117126
+SHA256: ec5303e70a26bb7a0d0451500ffa8e02acf77fffc3242ed07c6c50267c70bc3f
+SHA1: 69dc883f12fd36000f0cfc55ddeaaaa177a9d6ee
+MD5sum: f8945e88f29de0f8a4350eaefe3c55d0
 Description: Graphical Linux system update manager
  UpdateCenter is a graphical front-end for APT on Debian/Ubuntu-based
  distributions. It provides a polished Qt 6 GUI for browsing and installing
