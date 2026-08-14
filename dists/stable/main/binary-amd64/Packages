@@ -1,19 +1,28 @@
-Package: updatecenter
-Version: 1.0.6-1
+Package: nexfetch
+Version: 1.1.4-1
 Architecture: amd64
-Maintainer: Hyggshi OS <hyggshidev@gmail.com>
-Installed-Size: 326
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.4.0), libqt6gui6t64 (>= 6.4.0), libqt6network6t64 (>= 6.1.2), libqt6widgets6t64 (>= 6.1.2), libstdc++6 (>= 5)
+Maintainer: Hyggshi OS Foundation <hyggshidev@gmail.com>
+Installed-Size: 1524
+Depends: libc6 (>= 2.34)
+Recommends: chafa
+Homepage: https://github.com/Hyggshi-OS-Foundation/nexfetch
 Priority: optional
 Section: utils
-Filename: pool/main/u/updatecenter/updatecenter_1.0.6-1_amd64.deb
-Size: 116534
-SHA256: 8d0f404d5493f598ebd8d499c5510d5fe68eebcdcf39f3b9198809ee8aa5918b
-SHA1: 0584363cb8d62ac4c631c2184909cb43c92d836a
-MD5sum: 081e483be8a866d120a037067898c92c
-Description: Graphical Linux system update manager
- UpdateCenter is a graphical front-end for APT on Debian/Ubuntu-based
- distributions. It provides a polished Qt 6 GUI for browsing and installing
- system updates, viewing update history parsed from real APT/dpkg logs, and
- managing third-party repositories with GPG key verification.
+Filename: pool/main/n/nexfetch/nexfetch_1.1.4-1_amd64.deb
+Size: 1169024
+SHA256: 28f84708e9bf533b9f29427a4661147c21a262d33f08f839dd0c5c81388b6176
+SHA1: f4f3ba21092dc3b9408bf6e03442687e33d69946
+MD5sum: fd265000e4259149a0f0f561ae9b21fe
+Description: Modern, modular system information tool for Linux
+ nexfetch is a cross-platform system information tool similar to
+ neofetch and fastfetch, written in pure C with minimal dependencies.
+ .
+ Features:
+  * Cross-platform — Linux, macOS, and Windows
+  * Modular architecture — 21 built-in modules
+  * Multiple themes — boxed, classic, and modern
+  * Smart logo handling — ASCII and image logos via chafa
+  * Auto-scaling — disables logo on narrow terminals
+  * Configurable — JSON config + CLI flags
+  * Plugin system — load custom .so/.dll modules at runtime
 
