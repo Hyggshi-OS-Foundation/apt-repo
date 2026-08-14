@@ -1,16 +1,16 @@
 Package: updatecenter
-Version: 1.0.0-1
+Version: 1.1.8-1
 Architecture: arm64
 Maintainer: Hyggshi OS <hyggshidev@gmail.com>
 Installed-Size: 334
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6 | libqt6core6t64 (>= 6.4.0), libqt6gui6 | libqt6gui6t64 (>= 6.4.0), libqt6network6 | libqt6network6t64 (>= 6.1.2), libqt6widgets6 | libqt6widgets6t64 (>= 6.1.2), libstdc++6 (>= 5)
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6 (>= 6.4.0) | libqt6core6t64 (>= 6.4.0), libqt6gui6 (>= 6.4.0) | libqt6gui6t64 (>= 6.4.0), libqt6network6 (>= 6.1.2) | libqt6network6t64 (>= 6.1.2), libqt6widgets6 (>= 6.1.2) | libqt6widgets6t64 (>= 6.1.2), libstdc++6 (>= 5)
 Priority: optional
 Section: utils
-Filename: pool/main/u/updatecenter/updatecenter_1.0.0-1_arm64.deb
-Size: 109474
-SHA256: da067be13adae6c19561aa084ac74731bded30ddc5e8a00f73f5a62b5ab7c018
-SHA1: 720c828d3c8e4b2ae41c7985c21cc3b2168f8801
-MD5sum: 336aee87be8c37f9dbb46140278f91dd
+Filename: pool/main/u/updatecenter/updatecenter_1.1.8-1_arm64.deb
+Size: 109486
+SHA256: f02760ad450b538e30da93f92ab971b606a075a3b1102d23e1cb28afaa8add2f
+SHA1: e5469a3a8fb6ff4d5ca99657055947197e40e7f5
+MD5sum: d291d12d206f873e706c42ff1fa32373
 Description: Graphical Linux system update manager
  UpdateCenter is a graphical front-end for APT on Debian/Ubuntu-based
  distributions. It provides a polished Qt 6 GUI for browsing and installing
