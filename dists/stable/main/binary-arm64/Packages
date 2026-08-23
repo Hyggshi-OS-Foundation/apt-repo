@@ -1,19 +1,26 @@
-Package: updatecenter
-Version: 1.1.9-1
+Package: shortcut-manager
+Version: 1.0.0-1
 Architecture: arm64
-Maintainer: Hyggshi OS <hyggshidev@gmail.com>
-Installed-Size: 347
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6 (>= 6.4.0) | libqt6core6t64 (>= 6.4.0), libqt6gui6 (>= 6.4.0) | libqt6gui6t64 (>= 6.4.0), libqt6network6 (>= 6.1.2) | libqt6network6t64 (>= 6.1.2), libqt6widgets6 (>= 6.1.2) | libqt6widgets6t64 (>= 6.1.2), libstdc++6 (>= 5)
+Maintainer: hyggshi <hyggshi@users.noreply.github.com>
+Installed-Size: 336
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.4.0), libqt6gui6t64 (>= 6.4.0), libqt6widgets6t64 (>= 6.3.0), libstdc++6 (>= 5)
+Homepage: https://github.com/hyggshi/Shortcut-Manager
 Priority: optional
 Section: utils
-Filename: pool/main/u/updatecenter/updatecenter_1.1.9-1_arm64.deb
-Size: 110860
-SHA256: 53e58ec59b2dfe5cb59b7738defb5211ad9e1b84ea4984f0d6052899829b5f9f
-SHA1: e1c16467b39c90aaf36ceec3d4764d70d9258f8e
-MD5sum: 75e0292c88a67a9a856b54170b77bc11
-Description: Graphical Linux system update manager
- UpdateCenter is a graphical front-end for APT on Debian/Ubuntu-based
- distributions. It provides a polished Qt 6 GUI for browsing and installing
- system updates, viewing update history parsed from real APT/dpkg logs, and
- managing third-party repositories with GPG key verification.
+Filename: pool/main/s/shortcut-manager/shortcut-manager_1.0.0-1_arm64.deb
+Size: 93724
+SHA256: f87472668dda3e0a0cb4fee208b90394ca9d59353926569a33d1dda581b3fc01
+SHA1: ffc3275e70861b37a0408f479e7186120c5893fd
+MD5sum: 1edfc6952fb4c0d6f8a1965edcac154e
+Description: Nex Shortcut Manager (NSM) - Linux Desktop Shortcut Manager
+ A powerful, responsive Qt6 desktop application to scan, create,
+ edit, validate, pin and manage .desktop shortcuts on Linux.
+ Features include:
+  * Automatic scanning of system & user applications
+  * One-click Add/Remove shortcuts from Desktop
+  * In-place shortcut editing (Name, Exec, Icon, Categories)
+  * Visual Icon Picker with search and custom icon files
+  * File and Folder shortcut generator
+  * Validator for Freedesktop Desktop Entry specifications
+  * Pinned favorites and JSON Import/Export backup
 
