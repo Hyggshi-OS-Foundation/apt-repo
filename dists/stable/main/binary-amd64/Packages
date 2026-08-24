@@ -1,26 +1,15 @@
-Package: shortcut-manager
-Version: 1.0.0-1
+Package: nexfetch
+Version: 1.1.6
 Architecture: amd64
-Maintainer: hyggshi <hyggshi@users.noreply.github.com>
-Installed-Size: 301
-Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6t64 (>= 6.4.0), libqt6gui6t64 (>= 6.4.0), libqt6widgets6t64 (>= 6.3.0), libstdc++6 (>= 5)
-Homepage: https://github.com/hyggshi/Shortcut-Manager
+Maintainer: Hyggshi OS Foundation <tfhy5321@gmail.com>
 Priority: optional
 Section: utils
-Filename: pool/main/s/shortcut-manager/shortcut-manager_1.0.0-1_amd64.deb
-Size: 97742
-SHA256: eaed52a35dcc7f0ef26fd7fe2ffbd7a136cd51643ee9400c77cb895d2930ebc2
-SHA1: 5cdea7099847d273621cb18da8f8b57211e56577
-MD5sum: 4325317d701ba386cd1bce15d3f16823
-Description: Nex Shortcut Manager (NSM) - Linux Desktop Shortcut Manager
- A powerful, responsive Qt6 desktop application to scan, create,
- edit, validate, pin and manage .desktop shortcuts on Linux.
- Features include:
-  * Automatic scanning of system & user applications
-  * One-click Add/Remove shortcuts from Desktop
-  * In-place shortcut editing (Name, Exec, Icon, Categories)
-  * Visual Icon Picker with search and custom icon files
-  * File and Folder shortcut generator
-  * Validator for Freedesktop Desktop Entry specifications
-  * Pinned favorites and JSON Import/Export backup
+Filename: pool/main/n/nexfetch/nexfetch_1.1.6_amd64.deb
+Size: 46582
+SHA256: e73053c60c9c7a98460f68950279bd0fc9cccc39f1167f936301398b083f760f
+SHA1: 0083badc8da804e45bdf9ef7e1a79eecfd4ac9f8
+MD5sum: b9ca74d05aef4e951864dba34a794c5f
+Description: A fast neofetch-style system info tool
+ nexfetch is a lightweight, high-performance system information
+ fetcher written in C, roughly 3x faster than fastfetch.
 
