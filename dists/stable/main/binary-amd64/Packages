@@ -1,28 +1,20 @@
-Package: nexfetch
-Version: 1.1.6-official-1
+Package: nexcode-ide
+Version: 3.5.7~Insider.10
+License: MIT
+Vendor: Hyggshi OS major project center <hyggshidev@gmail.com>
 Architecture: amd64
-Maintainer: Hyggshi OS Foundation <hyggshidev@gmail.com>
-Installed-Size: 1524
-Depends: libc6 (>= 2.34)
-Recommends: chafa
-Homepage: https://github.com/Hyggshi-OS-Foundation/nexfetch
+Maintainer: Hyggshi OS major project center <hyggshidev@gmail.com>
+Installed-Size: 337975
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, libasound2
+Recommends: libappindicator3-1
+Homepage: https://github.com/Hyggshi-OS-project-center/NexCode
 Priority: optional
-Section: utils
-Filename: pool/main/n/nexfetch/nexfetch_1.1.6-official-1_amd64.deb
-Size: 1169072
-SHA256: 8526f886c90de6e6e6fbd90b60f48049df72e00ae03b4bd52a0223ddbb7f4ab9
-SHA1: d0eece7f35e31e537a37ee83b10d4409e2c943fb
-MD5sum: d587c762d15eb39e37bb77043cca2905
-Description: Modern, modular system information tool for Linux
- nexfetch is a cross-platform system information tool similar to
- neofetch and fastfetch, written in pure C with minimal dependencies.
- .
- Features:
-  * Cross-platform — Linux, macOS, and Windows
-  * Modular architecture — 21 built-in modules
-  * Multiple themes — boxed, classic, and modern
-  * Smart logo handling — ASCII and image logos via chafa
-  * Auto-scaling — disables logo on narrow terminals
-  * Configurable — JSON config + CLI flags
-  * Plugin system — load custom .so/.dll modules at runtime
+Section: devel
+Filename: pool/main/n/nexcode-ide/nexcode-ide_3.5.7~Insider.10_amd64.deb
+Size: 100911202
+SHA256: f650a8cca32c2fa909a5eb91092b03b760c8a7f636d69050bc430ff0c9d1c531
+SHA1: e4947ced3b73bd07568993a5ec09680fa63bed99
+MD5sum: 020d238b41f79b9e07dfa23bed746e8c
+Description: 
+  NexCode IDE — desktop code editor
 
