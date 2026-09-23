@@ -1,20 +1,20 @@
 Package: nexcode-ide
-Version: 4.0.0
+Version: 4.0.2
 License: MIT
 Vendor: Hyggshi OS major project center <hyggshidev@gmail.com>
 Architecture: amd64
 Maintainer: Hyggshi OS major project center <hyggshidev@gmail.com>
-Installed-Size: 341187
+Installed-Size: 340709
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, libasound2
 Recommends: libappindicator3-1
 Homepage: https://github.com/Hyggshi-OS-project-center/NexCode
 Priority: optional
 Section: devel
-Filename: pool/main/n/nexcode-ide/nexcode-ide_4.0.0_amd64.deb
-Size: 104249980
-SHA256: 289878d7f6dcf55c7451bd970bbef8d64d1c8be462f89b3c4bce085fd85eba28
-SHA1: 853ca06ef0938174346ca1c98e680d6969e3cd75
-MD5sum: c6ba87699abde42988dac3af9099c869
+Filename: pool/main/n/nexcode-ide/nexcode-ide_4.0.2_amd64.deb
+Size: 104596350
+SHA256: 071a0f328a3616b1490a4767b91d80919f2cce6d5dd7ae69a4ec12da96e5558b
+SHA1: 1a2efa8fb7f9072064f213e3025498b78df5b821
+MD5sum: e3c80ed1be42526edd80e293ebd30a8d
 Description: 
   NexCode IDE — desktop code editor
 
