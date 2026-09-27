@@ -1,13 +1,13 @@
 Origin: Hyggshi OS
 Label: Hyggshi OS
 Codename: stable
-Date: Sun, 27 Sep 2026 05:54:09 UTC
+Date: Sun, 27 Sep 2026 05:59:46 UTC
 Architectures: amd64 arm64 armhf
 Components: main
 Description: Official APT repository for Hyggshi OS
 MD5Sum:
- 179f3ef6ffe6382d5fea9cdfc3a240fb 545 main/binary-amd64/Packages
- e43f9b4310c52c2e5fc4f3a623d04508 396 main/binary-amd64/Packages.gz
+ 5596cd1d7a43d6f78671e2fb9121cf43 545 main/binary-amd64/Packages
+ f88321e6c54e703088b9bd4bb39bb9cf 396 main/binary-amd64/Packages.gz
  854fac05d1523a4893bfe511e82d49b0 125 main/binary-amd64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-arm64/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-arm64/Packages.gz
@@ -19,8 +19,8 @@ MD5Sum:
  7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
  a8a6009648d25c4870d09168eb8b6a03 126 main/source/Release
 SHA1:
- b465635c62edc5c28416cabaa7b112092a6483d9 545 main/binary-amd64/Packages
- b33ff0d39d9bc9a9349a14bdb0739b6e9a9f1087 396 main/binary-amd64/Packages.gz
+ 6c81b5a8057e3af5e3acb67cf78be3aa2805e32c 545 main/binary-amd64/Packages
+ 4d575dbefb8cc6ab4e6ec742a46e25d5097ee90a 396 main/binary-amd64/Packages.gz
  3cbb10e4a4a3ba430f4b60d7f127520fcb70b1a6 125 main/binary-amd64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-arm64/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-arm64/Packages.gz
@@ -32,8 +32,8 @@ SHA1:
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
  180359f49d8faadb4b52bf6a238078aa18311f9c 126 main/source/Release
 SHA256:
- 5261628c46fa3af92304ff2e180affab60c68e374c96253909a3ecb1a39445d2 545 main/binary-amd64/Packages
- b74055a8a5688395ef0409a56d00c33d5b0d9a828fb604be698cf443c6030e22 396 main/binary-amd64/Packages.gz
+ 9bdd6821ee6cc6375f68ead4be8bbab8afa09c9d40ab2784c7f7782e9f561cd1 545 main/binary-amd64/Packages
+ 36b0bcdc7a5ecec5361841384c1f4fb7cdfadcfee4a0d00afc3e038237c9f4b3 396 main/binary-amd64/Packages.gz
  aa6a22a3959e67b302478255df940bdaa398f518e305f93b84a86506d19702fb 125 main/binary-amd64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-arm64/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-arm64/Packages.gz

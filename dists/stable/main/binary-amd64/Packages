@@ -1,14 +1,14 @@
 Package: nexfetch
-Version: 1.2.6
+Version: 1.2.7
 Architecture: amd64
 Maintainer: Hyggshi OS Foundation <tfhy5321@gmail.com>
 Priority: optional
 Section: utils
-Filename: pool/main/n/nexfetch/nexfetch_1.2.6_amd64.deb
-Size: 47794
-SHA256: 784079c9400de34c4cbd421f1944ec52fbf6cc9f1a4ad5a3947c21d1fff59a12
-SHA1: a0c5eafc572178beca15ff39eeefa35d9b427e18
-MD5sum: c6edd83797d9cbb778eb9bbfc5702b9a
+Filename: pool/main/n/nexfetch/nexfetch_1.2.7_amd64.deb
+Size: 47796
+SHA256: eb4f4695b63ec52651929352ece08ddbf90c97fc22785e6d878d0f1f06543e11
+SHA1: 61c7fc09f76017bdc423ee6e13e1c4fc7bfa9c22
+MD5sum: e64c79b86a5cdd1aaf17428c64285ff7
 Description: A fast neofetch-style system info tool
  nexfetch is a lightweight, high-performance system information
  fetcher written in C, roughly 3x faster than fastfetch.
