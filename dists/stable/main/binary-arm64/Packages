@@ -1,0 +1,28 @@
+Package: nexfetch
+Version: 1.2.7-1
+Architecture: arm64
+Maintainer: Hyggshi OS Foundation <hyggshidev@gmail.com>
+Installed-Size: 1683
+Depends: libc6 (>= 2.34)
+Recommends: chafa
+Homepage: https://github.com/Hyggshi-OS-Foundation/nexfetch
+Priority: optional
+Section: utils
+Filename: pool/main/n/nexfetch/nexfetch_1.2.7-1_arm64.deb
+Size: 1090106
+SHA256: 7b57996241591d1a8e1da67e78e96108fe60dc14a402c553de26c2679a0dd956
+SHA1: 7be30ff8ffd3c389c5b80d4dcbdb55153467fc9a
+MD5sum: f152eede7766053cc021c3ead8a07c3a
+Description: Modern, modular system information tool for Linux
+ nexfetch is a cross-platform system information tool similar to
+ neofetch and fastfetch, written in pure C with minimal dependencies.
+ .
+ Features:
+  * Cross-platform — Linux, macOS, and Windows
+  * Modular architecture — 21 built-in modules
+  * Multiple themes — boxed, classic, and modern
+  * Smart logo handling — ASCII and image logos via chafa
+  * Auto-scaling — disables logo on narrow terminals
+  * Configurable — JSON config + CLI flags
+  * Plugin system — load custom .so/.dll modules at runtime
+
