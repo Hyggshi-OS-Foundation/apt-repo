@@ -1,20 +1,15 @@
-Package: nexcode-ide
-Version: 4.0.2
-License: MIT
-Vendor: Hyggshi OS major project center <hyggshidev@gmail.com>
+Package: nexfetch
+Version: 1.2.6
 Architecture: amd64
-Maintainer: Hyggshi OS major project center <hyggshidev@gmail.com>
-Installed-Size: 340709
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, libasound2
-Recommends: libappindicator3-1
-Homepage: https://github.com/Hyggshi-OS-project-center/NexCode
+Maintainer: Hyggshi OS Foundation <tfhy5321@gmail.com>
 Priority: optional
-Section: devel
-Filename: pool/main/n/nexcode-ide/nexcode-ide_4.0.2_amd64.deb
-Size: 104596350
-SHA256: 071a0f328a3616b1490a4767b91d80919f2cce6d5dd7ae69a4ec12da96e5558b
-SHA1: 1a2efa8fb7f9072064f213e3025498b78df5b821
-MD5sum: e3c80ed1be42526edd80e293ebd30a8d
-Description: 
-  NexCode IDE — desktop code editor
+Section: utils
+Filename: pool/main/n/nexfetch/nexfetch_1.2.6_amd64.deb
+Size: 47794
+SHA256: 784079c9400de34c4cbd421f1944ec52fbf6cc9f1a4ad5a3947c21d1fff59a12
+SHA1: a0c5eafc572178beca15ff39eeefa35d9b427e18
+MD5sum: c6edd83797d9cbb778eb9bbfc5702b9a
+Description: A fast neofetch-style system info tool
+ nexfetch is a lightweight, high-performance system information
+ fetcher written in C, roughly 3x faster than fastfetch.
 
