@@ -1,28 +1,19 @@
-Package: nexfetch
-Version: 1.2.7-1
+Package: updatecenter
+Version: 1.2.1-1
 Architecture: arm64
-Maintainer: Hyggshi OS Foundation <hyggshidev@gmail.com>
-Installed-Size: 1683
-Depends: libc6 (>= 2.34)
-Recommends: chafa
-Homepage: https://github.com/Hyggshi-OS-Foundation/nexfetch
+Maintainer: Hyggshi OS <hyggshidev@gmail.com>
+Installed-Size: 347
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libqt6core6 (>= 6.4.0) | libqt6core6t64 (>= 6.4.0), libqt6gui6 (>= 6.4.0) | libqt6gui6t64 (>= 6.4.0), libqt6network6 (>= 6.1.2) | libqt6network6t64 (>= 6.1.2), libqt6widgets6 (>= 6.1.2) | libqt6widgets6t64 (>= 6.1.2), libstdc++6 (>= 5)
 Priority: optional
 Section: utils
-Filename: pool/main/n/nexfetch/nexfetch_1.2.7-1_arm64.deb
-Size: 1090106
-SHA256: 7b57996241591d1a8e1da67e78e96108fe60dc14a402c553de26c2679a0dd956
-SHA1: 7be30ff8ffd3c389c5b80d4dcbdb55153467fc9a
-MD5sum: f152eede7766053cc021c3ead8a07c3a
-Description: Modern, modular system information tool for Linux
- nexfetch is a cross-platform system information tool similar to
- neofetch and fastfetch, written in pure C with minimal dependencies.
- .
- Features:
-  * Cross-platform — Linux, macOS, and Windows
-  * Modular architecture — 21 built-in modules
-  * Multiple themes — boxed, classic, and modern
-  * Smart logo handling — ASCII and image logos via chafa
-  * Auto-scaling — disables logo on narrow terminals
-  * Configurable — JSON config + CLI flags
-  * Plugin system — load custom .so/.dll modules at runtime
+Filename: pool/main/u/updatecenter/updatecenter_1.2.1-1_arm64.deb
+Size: 116716
+SHA256: e146bf1db8d83201c481ec084e7282f07cc2378c2a3a29ad46a41b483ab225d8
+SHA1: f969939851eaaa714a3c1a337072a84cf511be67
+MD5sum: 7c270c860f7d839667f2e65ed2cb6923
+Description: Graphical Linux system update manager
+ UpdateCenter is a graphical front-end for APT on Debian/Ubuntu-based
+ distributions. It provides a polished Qt 6 GUI for browsing and installing
+ system updates, viewing update history parsed from real APT/dpkg logs, and
+ managing third-party repositories with GPG key verification.
 

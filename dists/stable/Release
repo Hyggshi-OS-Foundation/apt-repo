@@ -1,16 +1,16 @@
 Origin: Hyggshi OS
 Label: Hyggshi OS
 Codename: stable
-Date: Sun, 27 Sep 2026 06:02:38 UTC
+Date: Wed, 30 Sep 2026 04:53:42 UTC
 Architectures: amd64 arm64 armhf
 Components: main
 Description: Official APT repository for Hyggshi OS
 MD5Sum:
- ec512af1ba8cb830e605d9106ab288af 1087 main/binary-amd64/Packages
- bd099452847f89fcf164a1d3fe9eea95 692 main/binary-amd64/Packages.gz
+ d332799cd66bc25951eb55bce8f2237c 1019 main/binary-amd64/Packages
+ dd61fc9156f79b63d05f11a7f03cb312 615 main/binary-amd64/Packages.gz
  854fac05d1523a4893bfe511e82d49b0 125 main/binary-amd64/Release
- 1b04572c8666c2bbe958d0de9d731c31 1087 main/binary-arm64/Packages
- 4e4971a916def35f5cafe4d13b15474c 690 main/binary-arm64/Packages.gz
+ 42c1944d20cbae60e3110dd4ef29e924 1019 main/binary-arm64/Packages
+ 3403ccc70c4c1b5bea9a36bdcfcaeb0b 619 main/binary-arm64/Packages.gz
  2c0fcdd7a97300ddb2f6b974d4870ac3 125 main/binary-arm64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-armhf/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-armhf/Packages.gz
@@ -19,11 +19,11 @@ MD5Sum:
  7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
  a8a6009648d25c4870d09168eb8b6a03 126 main/source/Release
 SHA1:
- 91b7008ac1cc1a847bf54cad3a803ce656003c3f 1087 main/binary-amd64/Packages
- 52fab71fd3efb0be02832b0ea6d55f3a88cf78d2 692 main/binary-amd64/Packages.gz
+ 303e047c3b1142f5315bff6a3b3feac4fe255252 1019 main/binary-amd64/Packages
+ 7fce8ae87d8cad132b1673e0914aa3d7c3c27421 615 main/binary-amd64/Packages.gz
  3cbb10e4a4a3ba430f4b60d7f127520fcb70b1a6 125 main/binary-amd64/Release
- 01b92907ca10a3a2e12c7cd308d250057cdfbaeb 1087 main/binary-arm64/Packages
- c5f5de9041d42348048a084c69e727fdb5368a5b 690 main/binary-arm64/Packages.gz
+ 9ff6445a013d6bd4854f72bfa34d0e2f634ee82a 1019 main/binary-arm64/Packages
+ c45e2be3979ae1862f999be743e092d19f48f3a9 619 main/binary-arm64/Packages.gz
  b741354f86b0ad14cefc59d74063d3dc6e1d7b67 125 main/binary-arm64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-armhf/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-armhf/Packages.gz
@@ -32,11 +32,11 @@ SHA1:
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
  180359f49d8faadb4b52bf6a238078aa18311f9c 126 main/source/Release
 SHA256:
- 24d2c4fc177907bee18c0b5739fdc7d4456b82190a7f9892183025f507f84e7f 1087 main/binary-amd64/Packages
- 5a0ca50e6c94d9087e45fb5abf7105f927e08bf702adb30c3326792501eb156d 692 main/binary-amd64/Packages.gz
+ 06b4b42796d32873ec17d766e535ad921992b2008c2582fa241eba0e69c6431d 1019 main/binary-amd64/Packages
+ 00b03d19570be7936a300d75c17eec3942b01229d943da79dd5b99e9996d50a9 615 main/binary-amd64/Packages.gz
  aa6a22a3959e67b302478255df940bdaa398f518e305f93b84a86506d19702fb 125 main/binary-amd64/Release
- f9886a54ef8ef37513dc9ba3fb0e66f7b95494062bb6275e0a5af4b0baa806a4 1087 main/binary-arm64/Packages
- a25be117dde9a7f00704d47e56e660cddb5411295a37b8be15848ca9768db02a 690 main/binary-arm64/Packages.gz
+ 8555b2bd91a500b1ab65afae8d7ec27f1c6c09b19cbb29f58f550dd27d3a4454 1019 main/binary-arm64/Packages
+ 17757534866acf781d3006574a7c470ff94f8828526bced47c014da33e7978e4 619 main/binary-arm64/Packages.gz
  eb5ad0ba8b079b23e29e753eff49084c2de14b379b29d1360ad14dd1829b0faa 125 main/binary-arm64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-armhf/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-armhf/Packages.gz
