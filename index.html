@@ -10,37 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --bg:        #0d0d0d;
-      --surface:   #141414;
-      --border:    #252525;
-      --accent:    #e8ff6b;
-      --accent2:   #6bffb8;
-      --text:      #e8e8e8;
-      --muted:     #666;
-      --tag-bg:    #1c1c1c;
-      --mono:      'JetBrains Mono', monospace;
-      --sans:      'Inter', sans-serif;
+      --bg: #0d0d0d; --surface: #141414; --border: #252525;
+      --accent: #e8ff6b; --accent2: #6bffb8;
+      --text: #e8e8e8; --muted: #666; --tag-bg: #1c1c1c;
+      --mono: 'JetBrains Mono', monospace; --sans: 'Inter', sans-serif;
     }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.6; min-height: 100vh; }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 14px;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    .topbar {
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      height: 48px;
-    }
+    .topbar { border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; align-items: center; gap: 16px; height: 48px; }
     .topbar-logo { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: .04em; }
     .topbar-sep { color: var(--border); }
     .topbar-crumb { color: var(--muted); font-size: 13px; font-family: var(--mono); }
@@ -48,7 +26,6 @@
     .badge { background: var(--tag-bg); border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 2px; }
 
     .layout { display: grid; grid-template-columns: 220px 1fr; max-width: 1100px; margin: 0 auto; padding: 32px 24px; gap: 32px; }
-
     .sidebar-section { margin-bottom: 28px; }
     .sidebar-title { font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
     .sidebar-item { display: flex; align-items: center; gap: 8px; padding: 6px 8px; font-size: 13px; color: var(--text); text-decoration: none; border: 1px solid transparent; border-radius: 3px; cursor: pointer; background: none; width: 100%; text-align: left; }
@@ -56,7 +33,7 @@
     .sidebar-item.active { background: var(--surface); border-color: var(--border); color: var(--accent); }
 
     .page-header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 24px; }
-    .page-title { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .page-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
     .page-sub { color: var(--muted); font-size: 13px; }
 
     .stats-row { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
@@ -69,25 +46,46 @@
 
     .pkg-table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
     .pkg-table thead th { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 14px; text-align: left; font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
-    .pkg-table tbody tr { border-bottom: 1px solid var(--border); }
+    .pkg-table tbody tr { border-bottom: 1px solid var(--border); cursor: pointer; }
     .pkg-table tbody tr:last-child { border-bottom: none; }
     .pkg-table tbody tr:hover { background: var(--surface); }
     .pkg-table td { padding: 12px 14px; vertical-align: top; }
     .pkg-name { font-family: var(--mono); font-weight: 600; font-size: 13px; color: var(--accent); }
     .pkg-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
     .pkg-version { font-family: var(--mono); font-size: 12px; color: var(--accent2); }
-    .pkg-arch-list { display: flex; gap: 4px; flex-wrap: wrap; }
-    .arch-tag { background: var(--tag-bg); border: 1px solid var(--border); font-family: var(--mono); font-size: 10px; padding: 1px 6px; border-radius: 2px; color: var(--muted); }
+    .arch-tag { background: var(--tag-bg); border: 1px solid var(--border); font-family: var(--mono); font-size: 10px; padding: 1px 6px; border-radius: 2px; color: var(--muted); display: inline-block; margin: 1px; }
+    .latest-tag { color: var(--accent2); border-color: var(--accent2); }
+
+    /* Detail panel */
+    .detail-panel { border: 1px solid var(--border); border-radius: 4px; margin-bottom: 28px; display: none; }
+    .detail-panel.open { display: block; }
+    .detail-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 14px; font-family: var(--mono); font-size: 11px; color: var(--muted); display: flex; align-items: center; justify-content: space-between; }
+    .detail-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 14px; }
+    .detail-close:hover { color: var(--text); }
+    .detail-body { padding: 0; }
+    .detail-row { display: grid; grid-template-columns: 140px 1fr; gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--border); }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-key { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+    .detail-val { font-family: var(--mono); font-size: 12px; }
+
+    /* Deb list */
+    .deb-list { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
+    .deb-list-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 14px; font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+    .deb-row { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 12px; }
+    .deb-row:last-child { border-bottom: none; }
+    .deb-row:hover { background: var(--surface); }
+    .deb-filename { flex: 1; color: var(--text); word-break: break-all; }
+    .deb-size { color: var(--muted); font-size: 11px; min-width: 70px; text-align: right; }
 
     .install-card { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 28px; }
-    .install-card-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 14px; font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .install-card-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 14px; font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
     .install-step { padding: 14px; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: flex-start; }
     .install-step:last-child { border-bottom: none; }
     .step-num { font-family: var(--mono); font-size: 10px; color: var(--accent); background: var(--tag-bg); border: 1px solid var(--border); min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border-radius: 2px; flex-shrink: 0; margin-top: 1px; }
     .step-body { flex: 1; }
     .step-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
     .code-block { background: #0a0a0a; border: 1px solid var(--border); border-radius: 3px; padding: 10px 12px; font-family: var(--mono); font-size: 12px; color: var(--text); display: flex; align-items: center; justify-content: space-between; gap: 12px; word-break: break-all; }
-    .copy-btn { background: var(--tag-bg); border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 2px; cursor: pointer; flex-shrink: 0; white-space: nowrap; }
+    .copy-btn { background: var(--tag-bg); border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 2px; cursor: pointer; flex-shrink: 0; }
     .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
     .copy-btn.copied { color: var(--accent2); border-color: var(--accent2); }
 
@@ -96,18 +94,11 @@
     .file-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); }
     .file-row:last-child { border-bottom: none; }
     .file-row:hover { background: var(--surface); }
-    .file-icon { color: var(--muted); flex-shrink: 0; }
     .file-name { font-family: var(--mono); font-size: 12px; color: var(--accent); flex: 1; }
     .file-size { font-family: var(--mono); font-size: 11px; color: var(--muted); }
     .file-type { font-family: var(--mono); font-size: 10px; color: var(--muted); background: var(--tag-bg); border: 1px solid var(--border); padding: 1px 6px; border-radius: 2px; }
-    .dl-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+    .dl-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); font-size: 10px; padding: 3px 8px; border-radius: 2px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
     .dl-btn:hover { border-color: var(--accent); color: var(--accent); }
-
-    .deb-row { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 12px; }
-    .deb-row:last-child { border-bottom: none; }
-    .deb-row:hover { background: var(--surface); }
-    .deb-filename { flex: 1; color: var(--text); }
-    .deb-size { color: var(--muted); font-size: 11px; min-width: 70px; text-align: right; }
 
     .footer { border-top: 1px solid var(--border); padding: 16px 24px; display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 11px; font-family: var(--mono); }
     .footer a { color: var(--muted); text-decoration: none; }
@@ -120,6 +111,9 @@
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
+    .loading { color: var(--muted); font-family: var(--mono); font-size: 12px; padding: 20px 14px; }
+    .error-msg { color: #ff6b6b; font-family: var(--mono); font-size: 12px; padding: 12px 14px; }
+
     @media (max-width: 700px) { .layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
   </style>
 </head>
@@ -131,7 +125,7 @@
   <span class="topbar-crumb">apt-repo</span>
   <div class="topbar-right">
     <span class="badge">stable</span>
-    <span class="badge">amd64 · arm64</span>
+    <span class="badge" id="arch-badge">amd64 · arm64</span>
   </div>
 </div>
 
@@ -162,14 +156,10 @@
         <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         GitHub
       </a>
-      <a class="sidebar-item" href="https://github.com/Hyggshi-OS-Foundation/nexfetch" target="_blank">
-        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M4.715 6.542L3.343 7.914a3 3 0 104.243 4.243l1.828-1.829A3 3 0 008.586 5.5L8 6.086a1.002 1.002 0 00-.154.199 2 2 0 01.861 3.337L6.88 11.45a2 2 0 11-2.83-2.83l.793-.792a4.018 4.018 0 01-.128-1.287z"/><path d="M6.586 4.672A3 3 0 007.414 9.5l.775-.776a2 2 0 01-.896-3.346L9.12 3.55a2 2 0 112.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 10-4.243-4.243L6.586 4.672z"/></svg>
-        nexfetch
-      </a>
     </div>
   </aside>
 
-  <main class="main">
+  <main>
     <div class="page-header">
       <div class="page-title">APT Repository — Hyggshi OS</div>
       <div class="page-sub">Official package repository · Codename: <code>stable</code></div>
@@ -187,26 +177,26 @@
       <div class="stats-row">
         <div class="stat-card">
           <div class="stat-label">Packages</div>
-          <div class="stat-value">1</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Latest</div>
-          <div class="stat-value" style="font-size:16px;margin-top:4px;">1.1.3-1</div>
+          <div class="stat-value" id="stat-pkgcount">—</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Architectures</div>
-          <div class="stat-value" style="font-size:14px;margin-top:6px;">amd64 arm64</div>
+          <div class="stat-value" id="stat-arches" style="font-size:13px;margin-top:6px;">—</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Component</div>
           <div class="stat-value" style="font-size:16px;margin-top:4px;">main</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Codename</div>
+          <div class="stat-value" style="font-size:16px;margin-top:4px;">stable</div>
         </div>
       </div>
 
       <div class="section-header"><span class="section-title">Quick install</span></div>
       <div class="code-block" style="margin-bottom:24px;">
         <span>bash &lt;(curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/install.sh)</span>
-        <button class="copy-btn" id="copy-quick" onclick="copyCode('copy-quick', 'bash <(curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/install.sh)')">copy</button>
+        <button class="copy-btn" id="copy-quick" onclick="copyCode('copy-quick','bash <(curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/install.sh)')">copy</button>
       </div>
 
       <div class="section-header"><span class="section-title">Repository info</span></div>
@@ -221,7 +211,7 @@
         </div>
         <div class="file-row" style="display:grid;grid-template-columns:160px 1fr;gap:8px;">
           <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Architectures</span>
-          <span style="font-family:var(--mono);font-size:12px;">amd64 arm64</span>
+          <span id="info-arches" style="font-family:var(--mono);font-size:12px;">—</span>
         </div>
         <div class="file-row" style="display:grid;grid-template-columns:160px 1fr;gap:8px;">
           <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Components</span>
@@ -236,106 +226,22 @@
           <span style="font-family:var(--mono);font-size:12px;">hyggshi-archive-keyring</span>
         </div>
       </div>
+
+      <div class="section-header"><span class="section-title">Packages</span></div>
+      <div id="overview-pkg-list"><div class="loading">Loading packages…</div></div>
     </div>
 
     <!-- PACKAGES -->
     <div class="tab-panel" id="panel-packages">
-      <table class="pkg-table">
-        <thead>
-          <tr>
-            <th>Package</th>
-            <th>Version</th>
-            <th>Arch</th>
-            <th>Size</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="pkg-name">nexfetch</div>
-              <div class="pkg-desc">Modern, modular system information tool for Linux</div>
-            </td>
-            <td><span class="pkg-version">1.1.3-1</span></td>
-            <td><div class="pkg-arch-list"><span class="arch-tag">amd64</span><span class="arch-tag">arm64</span></div></td>
-            <td style="font-family:var(--mono);font-size:12px;color:var(--muted);">~1.1 MB</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="section-header"><span class="section-title">nexfetch — details</span></div>
-      <div class="files-list" style="margin-bottom:20px;">
-        <div class="file-row" style="display:grid;grid-template-columns:140px 1fr;gap:8px;">
-          <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Description</span>
-          <span style="font-family:var(--mono);font-size:12px;">Modern, modular system information tool for Linux</span>
+      <div id="pkg-table-wrap"><div class="loading">Loading packages…</div></div>
+      <div class="detail-panel" id="detail-panel">
+        <div class="detail-header">
+          <span id="detail-title">Package details</span>
+          <button class="detail-close" onclick="closeDetail()">✕</button>
         </div>
-        <div class="file-row" style="display:grid;grid-template-columns:140px 1fr;gap:8px;">
-          <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Section</span>
-          <span style="font-family:var(--mono);font-size:12px;">utils</span>
-        </div>
-        <div class="file-row" style="display:grid;grid-template-columns:140px 1fr;gap:8px;">
-          <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Priority</span>
-          <span style="font-family:var(--mono);font-size:12px;">optional</span>
-        </div>
-        <div class="file-row" style="display:grid;grid-template-columns:140px 1fr;gap:8px;">
-          <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Depends</span>
-          <span style="font-family:var(--mono);font-size:12px;">libc6 (&gt;= 2.34)</span>
-        </div>
-        <div class="file-row" style="display:grid;grid-template-columns:140px 1fr;gap:8px;">
-          <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Recommends</span>
-          <span style="font-family:var(--mono);font-size:12px;">chafa</span>
-        </div>
-        <div class="file-row" style="display:grid;grid-template-columns:140px 1fr;gap:8px;border-bottom:none;">
-          <span style="color:var(--muted);font-family:var(--mono);font-size:11px;">Homepage</span>
-          <a href="https://github.com/Hyggshi-OS-Foundation/nexfetch" target="_blank" style="font-family:var(--mono);font-size:12px;color:var(--accent);text-decoration:none;">github.com/Hyggshi-OS-Foundation/nexfetch</a>
-        </div>
+        <div class="detail-body" id="detail-body"></div>
       </div>
-
-      <div class="section-header"><span class="section-title">Available .deb files</span></div>
-      <div class="files-list">
-        <div class="files-list-header">pool/main/n/nexfetch/</div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.1.3-1_amd64.deb</span>
-          <span class="arch-tag">amd64</span><span class="arch-tag" style="color:var(--accent2);border-color:var(--accent2);">latest</span>
-          <span class="deb-size">1.1 MB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.1.3-1_amd64.deb" download>download</a>
-        </div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.1.3-1_arm64.deb</span>
-          <span class="arch-tag">arm64</span><span class="arch-tag" style="color:var(--accent2);border-color:var(--accent2);">latest</span>
-          <span class="deb-size">1.1 MB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.1.3-1_arm64.deb" download>download</a>
-        </div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.1.1-official-1_amd64.deb</span>
-          <span class="arch-tag">amd64</span>
-          <span class="deb-size">1.1 MB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.1.1-official-1_amd64.deb" download>download</a>
-        </div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.1.1-official-1_arm64.deb</span>
-          <span class="arch-tag">arm64</span>
-          <span class="deb-size">1.1 MB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.1.1-official-1_arm64.deb" download>download</a>
-        </div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.0.15-1_amd64.deb</span>
-          <span class="arch-tag">amd64</span>
-          <span class="deb-size">1.1 MB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.0.15-1_amd64.deb" download>download</a>
-        </div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.0.15-1_arm64.deb</span>
-          <span class="arch-tag">arm64</span>
-          <span class="deb-size">1.1 MB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.0.15-1_arm64.deb" download>download</a>
-        </div>
-        <div class="deb-row">
-          <span class="deb-filename">nexfetch_1.0.0_amd64.deb</span>
-          <span class="arch-tag">amd64</span>
-          <span class="deb-size">38.6 KB</span>
-          <a class="dl-btn" href="pool/main/n/nexfetch/nexfetch_1.0.0_amd64.deb" download>download</a>
-        </div>
-      </div>
+      <div id="deb-list-wrap"></div>
     </div>
 
     <!-- INSTALL -->
@@ -348,17 +254,17 @@
             <div class="step-label">Run the install script</div>
             <div class="code-block">
               <span>bash &lt;(curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/install.sh)</span>
-              <button class="copy-btn" id="copy-auto" onclick="copyCode('copy-auto', 'bash <(curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/install.sh)')">copy</button>
+              <button class="copy-btn" id="copy-auto" onclick="copyCode('copy-auto','bash <(curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/install.sh)')">copy</button>
             </div>
           </div>
         </div>
         <div class="install-step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <div class="step-label">Install a package</div>
+            <div class="step-label">Install a package (example)</div>
             <div class="code-block">
-              <span>sudo apt install nexfetch</span>
-              <button class="copy-btn" id="copy-apt" onclick="copyCode('copy-apt', 'sudo apt install nexfetch')">copy</button>
+              <span id="apt-example">sudo apt install nexfetch</span>
+              <button class="copy-btn" id="copy-apt" onclick="copyCode('copy-apt', document.getElementById('apt-example').textContent)">copy</button>
             </div>
           </div>
         </div>
@@ -372,7 +278,7 @@
             <div class="step-label">Add GPG key</div>
             <div class="code-block">
               <span>curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/hyggshi-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/hyggshi-archive-keyring.gpg</span>
-              <button class="copy-btn" id="copy-gpg" onclick="copyCode('copy-gpg', 'curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/hyggshi-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/hyggshi-archive-keyring.gpg')">copy</button>
+              <button class="copy-btn" id="copy-gpg" onclick="copyCode('copy-gpg','curl -fsSL https://hyggshi-os-foundation.github.io/apt-repo/hyggshi-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/hyggshi-archive-keyring.gpg')">copy</button>
             </div>
           </div>
         </div>
@@ -391,18 +297,21 @@
           <div class="step-body">
             <div class="step-label">Update and install</div>
             <div class="code-block">
-              <span>sudo apt update &amp;&amp; sudo apt install nexfetch</span>
-              <button class="copy-btn" id="copy-upd" onclick="copyCode('copy-upd', 'sudo apt update && sudo apt install nexfetch')">copy</button>
+              <span>sudo apt update &amp;&amp; sudo apt install &lt;package&gt;</span>
+              <button class="copy-btn" id="copy-upd" onclick="copyCode('copy-upd','sudo apt update && sudo apt install <package>')">copy</button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Per-package install commands (dynamic) -->
+      <div id="install-pkgs"></div>
     </div>
 
     <!-- FILES -->
     <div class="tab-panel" id="panel-files">
       <div class="files-list" style="margin-bottom:20px;">
-        <div class="files-list-header">Keys &amp; Signatures</div>
+        <div class="files-list-header">Keys &amp; Scripts</div>
         <a class="file-row" href="hyggshi-archive-keyring.gpg" download>
           <span class="file-name">hyggshi-archive-keyring.gpg</span>
           <span class="file-type">GPG binary</span>
@@ -417,49 +326,42 @@
         </a>
       </div>
 
-      <div class="files-list">
+      <div class="files-list" style="margin-bottom:20px;">
         <div class="files-list-header">dists/stable/</div>
         <a class="file-row" href="dists/stable/InRelease" target="_blank">
-          <span class="file-name">InRelease</span>
-          <span class="file-type">signed</span>
-          <span class="file-size">3.1 KB</span>
+          <span class="file-name">InRelease</span><span class="file-type">signed</span>
         </a>
         <a class="file-row" href="dists/stable/Release" target="_blank">
-          <span class="file-name">Release</span>
-          <span class="file-type">text</span>
-          <span class="file-size">2.2 KB</span>
+          <span class="file-name">Release</span><span class="file-type">text</span>
         </a>
         <a class="file-row" href="dists/stable/Release.gpg" download>
-          <span class="file-name">Release.gpg</span>
-          <span class="file-type">sig</span>
-          <span class="file-size">833 B</span>
+          <span class="file-name">Release.gpg</span><span class="file-type">sig</span>
         </a>
         <a class="file-row" href="dists/stable/main/binary-amd64/Packages" target="_blank">
-          <span class="file-name">main/binary-amd64/Packages</span>
-          <span class="file-type">index</span>
-          <span class="file-size">1.1 KB</span>
+          <span class="file-name">main/binary-amd64/Packages</span><span class="file-type">index</span>
         </a>
         <a class="file-row" href="dists/stable/main/binary-arm64/Packages" target="_blank" style="border-bottom:none;">
-          <span class="file-name">main/binary-arm64/Packages</span>
-          <span class="file-type">index</span>
-          <span class="file-size">1.1 KB</span>
+          <span class="file-name">main/binary-arm64/Packages</span><span class="file-type">index</span>
         </a>
       </div>
-    </div>
 
+      <!-- Dynamic deb file list -->
+      <div id="files-deb-wrap"><div class="loading">Loading file list…</div></div>
+    </div>
   </main>
 </div>
 
 <div class="footer">
   <span>hyggshi-os-foundation.github.io/apt-repo</span>
   <span>·</span>
-  <span>stable · amd64 · arm64</span>
+  <span>stable</span>
   <div class="footer-right">
     <a href="https://github.com/Hyggshi-OS-Foundation" target="_blank">Hyggshi OS Foundation</a>
   </div>
 </div>
 
 <script>
+// ── Tab switching ──────────────────────────────────────────────────────────
 function showTab(name) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -472,6 +374,7 @@ function showTab(name) {
   if (navBtn) navBtn.classList.add('active');
 }
 
+// ── Copy ──────────────────────────────────────────────────────────────────
 function copyCode(btnId, text) {
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.getElementById(btnId);
@@ -481,6 +384,262 @@ function copyCode(btnId, text) {
     setTimeout(() => { btn.textContent = prev; btn.classList.remove('copied'); }, 1800);
   });
 }
+
+// ── Parse debian Packages file ────────────────────────────────────────────
+function parsePackagesFile(text) {
+  const packages = [];
+  const blocks = text.trim().split(/\n\n+/);
+  for (const block of blocks) {
+    if (!block.trim()) continue;
+    const pkg = {};
+    let currentKey = null;
+    for (const line of block.split('\n')) {
+      if (line.startsWith(' ') || line.startsWith('\t')) {
+        if (currentKey) pkg[currentKey] = (pkg[currentKey] || '') + '\n' + line.trim();
+      } else {
+        const colon = line.indexOf(':');
+        if (colon > 0) {
+          currentKey = line.slice(0, colon).trim();
+          pkg[currentKey] = line.slice(colon + 1).trim();
+        }
+      }
+    }
+    if (pkg['Package']) packages.push(pkg);
+  }
+  return packages;
+}
+
+function fmtSize(bytes) {
+  const n = parseInt(bytes);
+  if (isNaN(n)) return '—';
+  if (n >= 1048576) return (n / 1048576).toFixed(1) + ' MB';
+  if (n >= 1024) return (n / 1024).toFixed(0) + ' KB';
+  return n + ' B';
+}
+
+// ── State ─────────────────────────────────────────────────────────────────
+let allPackages = {}; // { name: [pkg_amd64, pkg_arm64, ...] }
+let selectedPkg = null;
+
+// ── Fetch both arch Packages files ───────────────────────────────────────
+async function loadPackages() {
+  const archs = ['amd64', 'arm64'];
+  const results = {};
+
+  for (const arch of archs) {
+    try {
+      const r = await fetch(`dists/stable/main/binary-${arch}/Packages?_=${Date.now()}`);
+      if (!r.ok) continue;
+      const text = await r.text();
+      const pkgs = parsePackagesFile(text);
+      for (const pkg of pkgs) {
+        pkg._arch = arch;
+        const name = pkg['Package'];
+        if (!results[name]) results[name] = [];
+        results[name].push(pkg);
+      }
+    } catch (e) { console.warn('fetch', arch, e); }
+  }
+
+  allPackages = results;
+
+  // Collect arches actually found
+  const archSet = new Set();
+  for (const entries of Object.values(results)) {
+    for (const p of entries) archSet.add(p._arch);
+  }
+  const archStr = [...archSet].join(' · ');
+
+  // Update stats
+  document.getElementById('stat-pkgcount').textContent = Object.keys(results).length;
+  document.getElementById('stat-arches').textContent = archStr;
+  document.getElementById('info-arches').textContent = [...archSet].join(' ');
+  document.getElementById('arch-badge').textContent = archStr;
+
+  renderOverviewPkgs();
+  renderPkgTable();
+  renderInstallPkgs();
+  renderFilesDeb();
+}
+
+// ── Overview: package cards ───────────────────────────────────────────────
+function renderOverviewPkgs() {
+  const wrap = document.getElementById('overview-pkg-list');
+  if (!Object.keys(allPackages).length) {
+    wrap.innerHTML = '<div class="error-msg">No packages found.</div>';
+    return;
+  }
+  const rows = Object.entries(allPackages).map(([name, entries]) => {
+    const p = entries[0];
+    const version = p['Version'] || '—';
+    const desc = (p['Description'] || '').split('\n')[0];
+    const arches = [...new Set(entries.map(e => e._arch))];
+    const archTags = arches.map(a => `<span class="arch-tag">${a}</span>`).join('');
+    return `<div class="file-row" style="cursor:pointer;" onclick="showTab('packages');selectPkg('${name}')">
+      <div style="flex:1">
+        <span class="pkg-name">${name}</span>
+        <span style="color:var(--muted);font-family:var(--mono);font-size:11px;margin-left:8px;">${version}</span>
+        <div class="pkg-desc">${desc}</div>
+      </div>
+      <div>${archTags}</div>
+    </div>`;
+  }).join('');
+  wrap.innerHTML = `<div class="files-list">${rows}</div>`;
+}
+
+// ── Packages tab: table ───────────────────────────────────────────────────
+function renderPkgTable() {
+  const wrap = document.getElementById('pkg-table-wrap');
+  if (!Object.keys(allPackages).length) {
+    wrap.innerHTML = '<div class="error-msg">No packages found.</div>';
+    return;
+  }
+  const rows = Object.entries(allPackages).map(([name, entries]) => {
+    const p = entries[0];
+    const version = p['Version'] || '—';
+    const desc = (p['Description'] || '').split('\n')[0];
+    const arches = [...new Set(entries.map(e => e._arch))];
+    const archTags = arches.map(a => `<span class="arch-tag">${a}</span>`).join('');
+    const totalSize = entries.reduce((s, e) => s + (parseInt(e['Size']) || 0), 0);
+    return `<tr onclick="selectPkg('${name}')" style="cursor:pointer;">
+      <td><div class="pkg-name">${name}</div><div class="pkg-desc">${desc}</div></td>
+      <td><span class="pkg-version">${version}</span></td>
+      <td>${archTags}</td>
+      <td style="font-family:var(--mono);font-size:12px;color:var(--muted);">${fmtSize(totalSize)}</td>
+    </tr>`;
+  }).join('');
+  wrap.innerHTML = `<table class="pkg-table">
+    <thead><tr><th>Package</th><th>Version</th><th>Arch</th><th>Size</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+// ── Select package → show details + deb list ─────────────────────────────
+function selectPkg(name) {
+  selectedPkg = name;
+  const entries = allPackages[name];
+  if (!entries) return;
+
+  const p = entries[0]; // use first arch for metadata
+  const arches = [...new Set(entries.map(e => e._arch))];
+
+  // Detail panel
+  document.getElementById('detail-title').textContent = name + ' — details';
+  const fields = [
+    ['Description', (p['Description'] || '').split('\n')[0]],
+    ['Version', p['Version']],
+    ['Section', p['Section']],
+    ['Priority', p['Priority']],
+    ['Architecture', arches.join(', ')],
+    ['Depends', p['Depends']],
+    ['Recommends', p['Recommends']],
+    ['Installed-Size', p['Installed-Size'] ? fmtSize(parseInt(p['Installed-Size']) * 1024) : null],
+    ['Homepage', p['Homepage']],
+    ['Maintainer', p['Maintainer']],
+  ];
+  const bodyRows = fields.filter(([,v]) => v).map(([k, v]) => {
+    const val = k === 'Homepage'
+      ? `<a href="${v}" target="_blank" style="color:var(--accent);text-decoration:none;">${v}</a>`
+      : v;
+    return `<div class="detail-row"><span class="detail-key">${k}</span><span class="detail-val">${val}</span></div>`;
+  }).join('');
+  document.getElementById('detail-body').innerHTML = bodyRows;
+  document.getElementById('detail-panel').classList.add('open');
+
+  // Deb file list
+  const debRows = entries.map(e => {
+    const filename = e['Filename'] || '';
+    const base = filename.split('/').pop();
+    const size = fmtSize(e['Size']);
+    const arch = e._arch;
+    return `<div class="deb-row">
+      <span class="deb-filename">${base}</span>
+      <span class="arch-tag">${arch}</span>
+      <span class="deb-size">${size}</span>
+      <a class="dl-btn" href="${filename}" download>download</a>
+    </div>`;
+  }).join('');
+
+  document.getElementById('deb-list-wrap').innerHTML = `
+    <div class="section-header"><span class="section-title">${name} — .deb files</span></div>
+    <div class="deb-list">
+      <div class="deb-list-header">pool/…/${name}/</div>
+      ${debRows}
+    </div>`;
+
+  // Scroll detail into view
+  document.getElementById('detail-panel').scrollIntoView({ behavior: 'instant', block: 'nearest' });
+}
+
+function closeDetail() {
+  document.getElementById('detail-panel').classList.remove('open');
+  document.getElementById('deb-list-wrap').innerHTML = '';
+}
+
+// ── Install tab: per-package commands ────────────────────────────────────
+function renderInstallPkgs() {
+  const wrap = document.getElementById('install-pkgs');
+  const names = Object.keys(allPackages);
+  if (!names.length) return;
+
+  // Update example
+  document.getElementById('apt-example').textContent = `sudo apt install ${names[0]}`;
+
+  const cards = names.map(name => `
+    <div class="install-card">
+      <div class="install-card-header">${name}</div>
+      <div class="install-step">
+        <div class="step-num">→</div>
+        <div class="step-body">
+          <div class="code-block">
+            <span>sudo apt install ${name}</span>
+            <button class="copy-btn" id="copy-pkg-${name}" onclick="copyCode('copy-pkg-${name}','sudo apt install ${name}')">copy</button>
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+  wrap.innerHTML = `<div class="section-header"><span class="section-title">Per-package install</span></div>${cards}`;
+}
+
+// ── Files tab: dynamic deb listing ───────────────────────────────────────
+function renderFilesDeb() {
+  const wrap = document.getElementById('files-deb-wrap');
+  const byPkg = {};
+  for (const [name, entries] of Object.entries(allPackages)) {
+    byPkg[name] = entries;
+  }
+  if (!Object.keys(byPkg).length) {
+    wrap.innerHTML = '';
+    return;
+  }
+  const sections = Object.entries(byPkg).map(([name, entries]) => {
+    const rows = entries.map(e => {
+      const filename = e['Filename'] || '';
+      const base = filename.split('/').pop();
+      return `<div class="deb-row">
+        <span class="deb-filename">${base}</span>
+        <span class="arch-tag">${e._arch}</span>
+        <span class="deb-size">${fmtSize(e['Size'])}</span>
+        <a class="dl-btn" href="${filename}" download>download</a>
+      </div>`;
+    }).join('');
+    const path = (entries[0]['Filename'] || '').split('/').slice(0, -1).join('/') + '/';
+    return `<div class="deb-list" style="margin-bottom:16px;">
+      <div class="deb-list-header">${path}</div>
+      ${rows}
+    </div>`;
+  }).join('');
+  wrap.innerHTML = `<div class="section-header"><span class="section-title">pool/ — all .deb files</span></div>${sections}`;
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────
+loadPackages().catch(err => {
+  console.error(err);
+  ['pkg-table-wrap','overview-pkg-list','files-deb-wrap'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = `<div class="error-msg">Failed to load packages: ${err.message}</div>`;
+  });
+});
 </script>
 </body>
 </html>
